@@ -1,8 +1,21 @@
 * {
+    font-family: "Roboto", sans-serif;
+}
+body {
     background-color: #191414;
     color: #fff;
+    margin: 0;
+    height: 100%;
 }
 
+html {
+    margin: 0;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+}
 .nav-logo {
     width: 50px;
     background: none;
@@ -10,6 +23,171 @@
 
 .footer-logo {
     width: 30%;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.entry > input {
+    border: solid 1px;
+    border-radius: 10px;
+    width: 30vw;
+    padding: 10px 12px;
+    transition: outline 0.5s ease;
+    margin-bottom: 10px;
+}
+
+.entry > input:focus {
+    outline: 1px solid #ff9900;
+}
+
+.submit-button {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ff9900;
+    padding: 20px;
+}
+
+.submit-button:hover {
+    background-color: white;
+    cursor: pointer;
+    outline: 1px solid #ff9900;
+}
+
+.submit-button {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ff9900;
+    padding: 20px;
+    font-size: 17px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    width: 80%;
+    height: 100%;
+    background-color: #130f0f;
+    border: solid 1px #ff9900;
+    box-shadow: 0px 5px 5px 5px rgb(63, 63, 63);
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 4px;
+}
+
+.progress-advanced {
+    width: 70%;
+    background-color: #ff9900;
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    animation-name: progressBarAdvanced;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.progress-medium {
+    width: 100%;
+    background-color: #ff9900;
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    animation-name: progressBarMedium;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.progress-novice {
+    width: 100%;
+    background-color: #ff9900;
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    animation-name: progressBarNovice;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.progress-expert {
+    width: 100%;
+    background-color: #ff9900;
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    animation-name: progressBarExpert;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.progress {
+    width: 50%;
+    background-color: #ff9900;
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    animation-name: progressBar;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+@keyframes progressBarAdvanced {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
+@keyframes progressBarNovice {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes progressBarExpert {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 84%;
+    }
+}
+
+@keyframes progressBarMedium {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
 }
 
 .container-center {
@@ -23,6 +201,15 @@
     align-items: center;
 }
 
+.hover {
+    transition: color 1s ease;
+}
+
+.hover:hover {
+    cursor: pointer;
+    color: #ff9900;
+}
+
 /* NAAAAAAAAAAAAAAAAAAAAAAV BAAAAAAAAAAAAAAAAAAAAAAAR  */
 #menu-toggle {
     display: none;
@@ -31,16 +218,16 @@
 .main-header {
     text-align: center;
 }
-
-html,
-body {
-    margin: 0;
-    height: 100%;
+.form-title {
+    width: 100%;
+    text-align: center;
 }
 
-* {
-    font-family: "Roboto", sans-serif;
-    box-sizing: border-box;
+.known-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5%;
 }
 
 .top-nav {
@@ -71,6 +258,7 @@ body {
 li > a {
     text-decoration: none;
     background: none;
+    color: #fff;
 }
 
 .menu-button-container {
